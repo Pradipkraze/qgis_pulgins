@@ -27,7 +27,7 @@ about=Text2Map lets you quickly visualise spatial data from plain text without l
   Built for QGIS 3.16+ / Qt5.
 
 tracker=https://github.com/Pradipkraze/qgis_pulgins/issues
-repository=https://github.com/Pradipkraze/qgis_pulgins/blob/main/text2map_v3.zip
+repository=https://github.com/Pradipkraze/qgis_pulgins/blob/text2map_v3
 homepage=https://github.com/Pradipkraze
 
 hasProcessingProvider=no
