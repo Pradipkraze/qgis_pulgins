@@ -1,0 +1,48 @@
+[general]
+name=Text2Map
+qgisMinimumVersion=3.16
+qgisMaximumVersion=3.99
+description=Convert pasted text (lat/lon, JSON, GeoJSON, WKT) into temporary geometry layers via a convenient side panel.
+version=1.2.0
+author=Pradip
+email=www.linkedin.com/in/pradipkraze/
+
+about=Text2Map lets you quickly visualise spatial data from plain text without leaving QGIS.
+
+  Supported input formats:
+  - Decimal lat/lon pairs (comma, space, or semicolon separated; one per line)
+  - DMS coordinates (Degrees Minutes Seconds)
+  - JSON objects / arrays with lat/lon key variants
+  - GeoJSON (FeatureCollection, Feature, or bare geometry)
+  - WKT (POINT, LINESTRING, POLYGON and MULTI variants)
+
+  Features:
+  - Automatic format detection
+  - Creates a temporary memory layer in EPSG:4326
+  - Preserves JSON / GeoJSON properties as attribute fields
+  - Custom layer naming
+  - Auto-zooms map canvas to the new layer
+  - Full error messages on parse failure
+
+  Built for QGIS 3.16+ / Qt5.
+
+tracker=https://github.com/Pradipkraze/qgis_pulgins/issues
+repository=https://github.com/Pradipkraze/qgis_pulgins/blob/main/text2map_v3.zip
+homepage=https://github.com/Pradipkraze
+
+hasProcessingProvider=no
+tags=coordinates,lat lon,latlon,geojson,wkt,json,geometry,import,text,convert,points,digitize
+icon=icons/icon.png
+experimental=False
+deprecated=False
+server=False
+
+changelog=
+  1.1.0 - Bug fix release (QGIS 3.x)
+    - Fixed QgsField using correct QVariant.String/Int/Double types
+    - Removed silent exception swallowing in GeoJSON parser
+    - bool values checked before int (bool is subclass of int)
+    - Nested JSON dict/list values safely stringified
+    - Full error detail shown in panel and message box
+    - Correct WKT generation for all geometry types incl. MultiPoint
+  1.0.0 - Initial release
